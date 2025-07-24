@@ -1,6 +1,6 @@
 ## 🚀 Clonador de Proyectos ChicBase
 
-Para clonar cualquier app, usa los scripts disponibles en [`/clone-tools`](./clone-tools/).
+Para clonar cualquier app, usa los scripts disponibles en [`/clone-tools`](/clone-tools/).
 
 ### 📦 Scripts
 
