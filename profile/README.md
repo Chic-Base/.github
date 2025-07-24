@@ -3,21 +3,16 @@
 **ChicBase** es la arquitectura base para construir, escalar y mantener múltiples apps Flutter de forma eficiente.  
 Permite compartir lógica entre proyectos y personalizar cada app de forma independiente, sin duplicar código innecesario.
 
----
-
-## 📦 Estructura de Proyectos
-
-Cada app se organiza en una carpeta propia, que contiene proyectos reutilizables (globales) y personalizados (por app):
 /nombre_app/
-├─ minibase/ ← lógica y branding específico de la app (🔧 editable)
-├─ skeleton/ ← UI y configuración específica de la app (🔧 editable)
-├─ metadata/ ← configuración dinámica, assets y textos por app (🔧 editable)
-├─ base/ ← lógica general (🌐 compartido)
-├─ superbase/ ← componentes UI y controladores comunes (🌐 compartido)
-├─ sharedkernel/ ← utilidades, preferencias, ads, analytics... (🌐 compartido)
+│
+├── minibase/        → lógica y branding específico de la app (🔧 editable)
+├── skeleton/        → UI y configuración específica de la app (🔧 editable)
+├── metadata/        → configuración dinámica, textos, assets por app (🔧 editable)
+│
+├── base/            → lógica general reutilizable (🌐 compartido)
+├── superbase/       → UI genérica y controladores comunes (🌐 compartido)
+└── sharedkernel/    → preferencias, ads, analytics, utilidades (🌐 compartido)
 
-
----
 
 ## 🛠 Repositorios involucrados
 
@@ -36,26 +31,17 @@ Cada app se organiza en una carpeta propia, que contiene proyectos reutilizables
 
 Este repositorio (`clone-tools`) incluye scripts para clonar rápidamente cualquier app basada en esta estructura.
 
----
-
-### 📦 Scripts disponibles
-
-| Script               | ¿Qué clona?                                           |
-|----------------------|--------------------------------------------------------|
-| `clone_app.sh`       | Toda la app (minibase, skeleton, metadata + globales) |
-| `clone_skeleton.sh`  | Solo skeleton, metadata, sharedkernel                 |
-| `clone_superbase.sh` | Solo superbase, metadata, sharedkernel                |
-
----
 
 ### 🧪 Uso rápido
 Para clonar cualquier app, usa los scripts disponibles en [/clone-tools](/clone-tools/).
 
 ## 📦 Scripts
 
-- clone_app.sh: clona toda una app completa
-- clone_skeleton.sh: clona solo skeleton + sharedkernel + metadata
-- clone_superbase.sh: clona superbase + sharedkernel + metadata
+| Script               | ¿Qué clona?                                           |
+|----------------------|--------------------------------------------------------|
+| `clone_app.sh`       | Toda la app (minibase, skeleton, metadata + globales) |
+| `clone_skeleton.sh`  | Solo skeleton, metadata, sharedkernel                 |
+| `clone_superbase.sh` | Solo superbase, metadata, sharedkernel                |
 
 ## 🛠 Requisitos
 
