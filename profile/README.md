@@ -19,7 +19,7 @@ Your Flutter App
 
 **The Magic**: When you fix a bug or add a feature to the shared modules, ALL your apps get the update automatically!
 
-## ⚙️ Script to Instantly to create a New App
+## ⚙️ Script to Instantly to create a New App [/scripts](/scripts/).
 
 Run this:
 
@@ -35,7 +35,7 @@ And get this:
 
 Perfect for launching a new ChicBase-powered app in seconds.
 
-## 🚀 Clone an App automatically
+## 🚀 Clone an App automatically [/scripts](/scripts/).
 
 ```bash
 # Get the tools
