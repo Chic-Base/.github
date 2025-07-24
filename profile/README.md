@@ -1,3 +1,4 @@
+
 # 🧠 ChicBase – Sistema Modular de Apps Flutter
 
 **ChicBase** es la arquitectura base para construir, escalar y mantener múltiples apps Flutter de forma eficiente.  
@@ -65,36 +66,73 @@ chmod +x clone_*.sh
 
 ---
 
-## 🧰 Alternativa Manual (Sin Scripts)
+## 🖐 Alternativa: Configuración manual
 
-También puedes configurar tu entorno manualmente sin usar los scripts:
+Si no deseas usar los scripts, puedes hacerlo manualmente:
 
-### 📁 Estructura esperada
-
-Crea una carpeta con el nombre de tu app (ej. `Artify25`) y dentro clona los siguientes proyectos con exactamente estos nombres de carpeta:
-
-```
-/Artify25/
-├── minibase/        ← git@github.com:Artify25/minibase.git
-├── skeleton/        ← git@github.com:Artify25/skeleton.git
-├── metadata/        ← git@github.com:Artify25/metadata.git
-│
-├── base/            ← git@github.com:Chic-Base/base.git
-├── superbase/       ← git@github.com:Chic-Base/superbase.git
-└── sharedkernel/    ← git@github.com:Chic-Base/sharedkernel.git
-```
-
-> ⚠️ **Los nombres de las carpetas deben coincidir exactamente** con los indicados arriba (`minibase`, `base`, etc.) para evitar errores al compilar.
-
-### 🔁 Paso adicional
-
-Luego de clonar, asegúrate de cambiar los remotes de los proyectos editables (`minibase`, `skeleton`, `metadata`) al repositorio correcto si es un fork o si usas tu propia organización.
-
-Ejemplo:
+1. Crea una carpeta con el nombre de tu app (por ejemplo `Artify25`)
+2. Dentro, clona los siguientes proyectos:
 
 ```bash
-cd minibase
-git remote set-url origin git@github.com:Artify25/minibase.git
+git clone git@github.com:Artify25/minibase.git
+git clone git@github.com:Artify25/skeleton.git
+git clone git@github.com:Artify25/metadata.git
+
+git clone git@github.com:Chic-Base/base.git
+git clone git@github.com:Chic-Base/superbase.git
+git clone git@github.com:Chic-Base/sharedkernel.git
 ```
 
-Repite este cambio para los otros módulos (`skeleton`, `metadata`) si es necesario.
+3. Asegúrate de usar los nombres de carpeta **exactos** (`minibase`, `skeleton`, `metadata`, etc.)
+
+---
+
+## 👤 Para desarrolladores con acceso parcial
+
+En algunos casos, un programador solo trabajará sobre una parte del sistema (por ejemplo, `skeleton` o `superbase`). Aquí están las instrucciones específicas:
+
+### 🔹 Caso: Trabajas solo con `skeleton`
+
+Tu scope incluye:
+
+```
+skeleton/
+sharedkernel/   ← lectura y uso
+metadata/       ← lectura y edición
+```
+
+Clona solo lo necesario con:
+
+```bash
+./clone_skeleton.sh Artify25
+```
+
+⚠️ No necesitas acceso a `base` ni `superbase`.
+
+---
+
+### 🔹 Caso: Trabajas solo con `superbase`
+
+Tu scope incluye:
+
+```
+superbase/
+sharedkernel/   ← lectura y uso
+metadata/       ← lectura y edición
+```
+
+Clona solo lo necesario con:
+
+```bash
+./clone_superbase.sh Artify25
+```
+
+Esto es útil para desarrolladores que trabajan sobre la UI genérica, componentes base o controladores globales.
+
+---
+
+### 📁 Requisitos para estos entornos reducidos
+
+- Usa siempre los nombres de carpeta exactos: `skeleton`, `superbase`, `sharedkernel`, `metadata`
+- Todos los paths relativos y dependencias ya están resueltas si respetas la estructura
+- Abre el proyecto directamente desde la carpeta sobre la que vas a trabajar (`skeleton` o `superbase`)
