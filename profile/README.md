@@ -3,15 +3,20 @@
 **ChicBase** es la arquitectura base para construir, escalar y mantener múltiples apps Flutter de forma eficiente.  
 Permite compartir lógica entre proyectos y personalizar cada app de forma independiente, sin duplicar código innecesario.
 
+### 📦 Estructura de Proyectos
+
+Cada app vive en su propia carpeta e incluye módulos **editables** y **compartidos**:
+
+```
 /nombre_app/
-│
 ├── minibase/        → lógica y branding específico de la app (🔧 editable)
-├── skeleton/        → UI y configuración específica de la app (🔧 editable)
-├── metadata/        → configuración dinámica, textos, assets por app (🔧 editable)
+├── skeleton/        → UI y configuración específica (🔧 editable)
+├── metadata/        → configuración dinámica, textos, assets (🔧 editable)
 │
 ├── base/            → lógica general reutilizable (🌐 compartido)
 ├── superbase/       → UI genérica y controladores comunes (🌐 compartido)
 └── sharedkernel/    → preferencias, ads, analytics, utilidades (🌐 compartido)
+```
 
 
 ## 🛠 Repositorios involucrados
