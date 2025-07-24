@@ -53,9 +53,9 @@ Para clonar cualquier app, usa los scripts disponibles en [/clone-tools](/clone-
 - Git + SSH configurado: [Guía aquí](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 - macOS, Linux o WSL (con Bash)
 
-## 🧪 Uso rápido
+### 🧪 Uso rápido
 
-bash
+```bash
 git clone git@github.com:Chic-Base/clone-tools.git
 cd clone-tools
 chmod +x clone_*.sh
@@ -63,4 +63,7 @@ chmod +x clone_*.sh
 ./clone_app.sh Artify25
 ./clone_skeleton.sh Artify25
 ./clone_superbase.sh Artify25
+```
+
+
 
