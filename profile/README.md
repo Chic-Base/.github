@@ -19,21 +19,7 @@ Your Flutter App
 
 **The Magic**: When you fix a bug or add a feature to the shared modules, ALL your apps get the update automatically!
 
-## 🚀 Quick Start
-
-```bash
-# Get the tools
-git clone git@github.com:Chic-Base/clone-tools.git
-cd clone-tools
-chmod +x *.sh
-
-# Clone what you need
-./clone_app.sh YourOrgName        # Everything (build complete apps)
-./clone_skeleton.sh YourOrgName   # Just UI modules (customize interface)
-./clone_superbase.sh YourOrgName  # Shared components (build for all apps)
-```
-
-## ⚙️ Script to Instantly Bootstrap Your App
+## ⚙️ Script to Instantly to create a New App
 
 Run this:
 
@@ -48,6 +34,22 @@ And get this:
 - 📦 App ready to build, no manual setup
 
 Perfect for launching a new ChicBase-powered app in seconds.
+
+## 🚀 Clone an App automatically
+
+```bash
+# Get the tools
+git clone git@github.com:Chic-Base/clone-tools.git
+cd clone-tools
+chmod +x *.sh
+
+# Clone what you need
+./clone_app.sh YourOrgName        # Everything (build complete apps)
+./clone_skeleton.sh YourOrgName   # Just UI modules (customize interface)
+./clone_superbase.sh YourOrgName  # Shared components (build for all apps)
+```
+
+
 
 ## 💡 Why ChicBase?
 
