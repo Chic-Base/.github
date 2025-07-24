@@ -33,6 +33,22 @@ chmod +x *.sh
 ./clone_superbase.sh YourOrgName  # Shared components (build for all apps)
 ```
 
+## ⚙️ Script to Instantly Bootstrap Your App
+
+Run this:
+
+```bash
+./setup_app.sh YourOrgName
+```
+
+And get this:
+
+- ✅ All ChicBase modules cloned
+- 🚀 Repos auto-created and pushed to GitHub
+- 📦 App ready to build, no manual setup
+
+Perfect for launching a new ChicBase-powered app in seconds.
+
 ## 💡 Why ChicBase?
 
 - **Build Fast**: Launch new apps in weeks, not months
